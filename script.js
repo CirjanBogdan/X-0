@@ -1,6 +1,3 @@
-let turn = 0;
-const cell = [];
-const tbody = document.querySelector('#table tbody');
 const winningCombinations = [
     [0, 1, 2],
     [3, 4, 5],
@@ -11,13 +8,14 @@ const winningCombinations = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+const cell = [];
 for (let i = 0; i < 9; ++i) {
     cell[i] = document.getElementById("cell" + i);
 }
-
+let turn = 0;
+const tbody = document.querySelector('#table tbody');
 tbody.addEventListener('click', function (e) {
     const cellTarget = e.target.closest('td');
-    const row = cellTarget.parentElement;
     if (!cellTarget) {
         return;
     }
@@ -30,7 +28,7 @@ tbody.addEventListener('click', function (e) {
             ++turn;
         }
     }
-    if (turn > 2) {
+    if (turn > 4) {
         checkWinner();
     }
 })
