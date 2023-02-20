@@ -39,12 +39,12 @@ function checkWinner() {
             if (cell[winningCombinations[i][0]].innerHTML === "X" &&
                 cell[winningCombinations[i][1]].innerHTML === "X" &&
                 cell[winningCombinations[i][2]].innerHTML === "X") {
-                    alert("Player 1 Wins");
+                    alert("Player(X) Wins");
                     location.reload();
             } else if (cell[winningCombinations[i][0]].innerHTML === "0" &&
                     cell[winningCombinations[i][1]].innerHTML === "0" &&
                     cell[winningCombinations[i][2]].innerHTML === "0") {
-                    alert("Player 2 Wins");
+                    alert("Player(0) Wins");
                     location.reload();
             }   
         }
